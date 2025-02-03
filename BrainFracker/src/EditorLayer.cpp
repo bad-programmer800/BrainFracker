@@ -146,6 +146,10 @@ namespace Brain {
 			ImGui::EndMenuBar();
 		}
 
+		m_Atlas3DPanel.OnImGuiRender();
+		m_Atlas2DPanel.OnImGuiRender();
+		m_AtlasControlPanel.OnImGuiRender();
+
 		ImGui::Begin("Settings");
 
 		auto stats = Brain::Renderer2D::GetStats();
