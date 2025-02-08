@@ -1,6 +1,7 @@
 #include "EditorLayer.h"
 #include <imgui/imgui.h>
 
+#include "Brain/Model/model.h"
 
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
@@ -25,6 +26,9 @@ namespace Brain {
 
 		m_CheckerboardTexture = Brain::Texture2D::Create("assets/textures/Checkerboard.png");
 		m_cvSourceImageTexture = Brain::Texture2D::Create(image);
+
+		Model* Obj10 = new Model("assets/models/10.obj");
+		//Obj10->ModelToOpenGL();
 
 		Brain::FramebufferSpecification fbSpec;
 		fbSpec.Width = 1280;
